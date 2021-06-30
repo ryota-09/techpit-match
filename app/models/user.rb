@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   validates :name, presence:true
+  validates :self_introduction, length:{ maximum:500 }
 
-  enum gender:{man:0, woman:1}
+  enum gender:{男性:0, 女性:1}
 end
