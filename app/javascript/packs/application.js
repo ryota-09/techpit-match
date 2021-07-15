@@ -3,7 +3,7 @@ import 'bootstrap';
 import'hammerjs';
 
 import '../stylesheets/application';
-import '@fortawesome/fontawesome-free/js/all'
+import '@fortawesome/fontawesome-free/js/all';
 
 
 // This file is automatically compiled by Webpack, along with any other files
@@ -17,7 +17,7 @@ require("@rails/activestorage").start()
 require("channels")
 
 require("src/profile_image_upload");
-require("src/swipe")
+require("src/swipe");
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
