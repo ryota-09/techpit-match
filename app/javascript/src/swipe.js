@@ -2,6 +2,8 @@ if(location.pathname == "/users") {
   $(function(){
     let allCards = document.querySelectorAll('.swipe--card');
 
+    let swipeContainer = document.querySelector('.swipe');
+
     function initCards() {
       allCards.forEach(function (card, index) {
         card.style.zIndex = allCards.length - index;
@@ -15,7 +17,7 @@ if(location.pathname == "/users") {
     allCards.forEach(function (el) {
       let hammertime = new Hammer(el);
 
-      hammertime.on('pan', function(event){
+      hammertime.on('pan', function (event) {
         if (event.deltaX === 0) return;
         if (event.center.x === 0 && event.center.y === 0) return;
 
@@ -28,7 +30,7 @@ if(location.pathname == "/users") {
         let yMulti = event.deltaY / 80;
         let rotate = xMulti * yMulti;
 
-        event.target.style.transform = 'translate(' + event.deltaX + 'px,' + event.deltaY + 'px) rotate(' + rotate + 'deg)';
+        event.target.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px) rotate(' + rotate + 'deg)';
       });
     });
   });
