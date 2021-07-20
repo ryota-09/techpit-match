@@ -136,6 +136,16 @@
   color: #CCD6DD;
 }
 
+.no-user {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &.is-active {
+    display: flex;
+  }
+}
+
 @media(min-width:414px){
   .swipe {
     height: 640px;
