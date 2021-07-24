@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   mount_uploader :profile_image, ProfileImageUploader
 
-  enum gender:{男性:0, 女性:1}
+  enum gender:{man:0, woman:1}
   def update_without_current_password(params, *options)
 
     if params[:password].blank? && params[:password_confirmation].blank?
